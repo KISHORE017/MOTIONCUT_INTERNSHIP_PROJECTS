@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/Logo00.png" alt="" width="125px"
+            /></a>
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Games</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="account.html">Account</a></li>
+              <!-- TODo: 22:20 -->
+            </ul>
+          </nav>
+          <a href="cart.html">cart</a>
+          <img
+            src="images/menu.png"
+            alt=""
+            class="menu-icon"
+            onclick="menutoggle()"
+          />
+      </div>
+    </div>
+
+    <!-- Single Products Detail -->
+    <div class="small-container single-product">
+      <div class="row">
+        <div class="col-2">
+          <img src="images/4fc.jpeg" width="100%" id="ProductImg" />
+
+          
+          </div>
+        </div>
+        <div class="col-2">
+          <p>Home / T-shirt</p>
+          <h2>RFARCRY 4 (UBISOFT)</h2>
+          <h4>$50.00</h4>
+          <select name="" id="">
+            <option value="">Select Edition</option>
+            <option value="">deluxe</option>
+            <option value="">premiuim</option>
+            <option value="">pre released</option>
+            <option value="">unpacked</option>
+            
+          </select>
+          <input type="number" value="1" />
+          <a href="" class="btn">Add to Cart</a>
+          <h3>Game Details<i class="fa fa-indent"></i></h3>
+          <br />
+          <p>
+            Far Cry 4 is a 2014 first-person shooter game developed by Ubisoft Montreal<br>
+            and published by Ubisoft. It is the successor to the 2012 video game Far Cry 3, <br>
+            and the fourth main installment in the Far Cry series. Set in the fictional <br>
+            Himalayan country of Kyrat, the game follows Ajay Ghale, a young Kyrati-American, <br>
+            who becomes caught in a civil war between Kyrat's Royal Army, controlled by the <br>
+            tyrannical king Pagan Min, and a rebel movement called the Golden Path. The gameplay<br>
+             focuses on combat and exploration; players battle enemy soldiers and dangerous <br>
+             wildlife using a wide array of weapons. The game features many elements found <br>
+             in role-playing games, such as a branching storyline and side quests. The game <br>
+             also features a map editor and both cooperative and competitive multiplayer modes.<br>
+
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>
+              
+            </p>
+            <div class="app-logo">
+              <img src="images/play-store.png" alt="" />
+              <img src="images/app-store.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" alt="" />
+            <p>
+              KNOW MORE ABOUT GAME??
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              
+            </ul>
+          </div>
+
+          <div class="footer-col-4">
+            
+            </ul>
+          </div>
+        </div>
+        <hr />
+        
+      </div>
+    </div>
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+
+    <!-- js for product gallery -->
+    <script>
+      var ProductImg = document.getElementById("ProductImg");
+      var smallImg = document.getElementsByClassName("small-img");
+      smallImg[0].onclick = function () {
+        ProductImg.src = smallImg[0].src;
+      };
+      smallImg[1].onclick = function () {
+        ProductImg.src = smallImg[1].src;
+      };
+      smallImg[2].onclick = function () {
+        ProductImg.src = smallImg[2].src;
+      };
+      smallImg[3].onclick = function () {
+        ProductImg.src = smallImg[3].src;
+      };
+    </script>
+  </body>
+</html>
